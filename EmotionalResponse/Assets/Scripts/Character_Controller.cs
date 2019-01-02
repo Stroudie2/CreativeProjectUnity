@@ -5,9 +5,9 @@ using UnityEngine;
 public class Character_Controller : MonoBehaviour {
 
     [Header("Movement")]
-    public int walkSpeed;
-    public int runSpeed;
-    private int speed;
+    public float walkSpeed;
+    public float runSpeed;
+    private float speed;
     private float tempo;    //used for footstep sound
 
     private Rigidbody rb;
@@ -78,7 +78,8 @@ public class Character_Controller : MonoBehaviour {
         {
             audioSource.pitch = speed;
             audioSource.volume = volume;
-            audioManager.GetComponent<AudioScript>().setAudio(clips[Random.Range(0, 4)]);
+            audioManager.GetComponent<AudioScript>().setAudio(clips[Random.Range(0, 3)]);
+            Debug.Log(audioSource.clip);
             audioSource.time = 0.0f;
             audioSource.Play();
         }
