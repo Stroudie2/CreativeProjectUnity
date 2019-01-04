@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EntranceDoor
+  - EntranceDoor2
+  - Torch
   layers:
   - Default
   - TransparentFX

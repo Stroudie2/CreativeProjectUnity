@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class EntranceTrigger : MonoBehaviour {
 
-    private GameObject tree;
+    public GameObject tree;
     void Start()
     {
-        tree = GameObject.FindGameObjectWithTag("EntranceDoor").gameObject;
-        tree.SetActive(false);
+        //tree = GameObject.FindGameObjectWithTag("EntranceDoor").gameObject;
+        if (tree.name == "EntranceDoor")
+        {
+            tree.SetActive(false);
+        }
+        else
+        {
+            tree.SetActive(true);
+        }
     }
 
 void OnTriggerEnter(Collider other)
@@ -16,7 +23,16 @@ void OnTriggerEnter(Collider other)
         if (other.gameObject.tag == "Player")
         {
             //add audio cues here for tree growing
-            tree.SetActive(true);
+            if (tree.activeSelf == false)
+            {
+                tree.SetActive(true);
+            }
+            else
+            {
+                tree.SetActive(false);
+                //activate particle mist to location
+            }
+            //destroy trigger
         }
     }
 }

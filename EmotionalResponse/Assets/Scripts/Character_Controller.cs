@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character_Controller : MonoBehaviour {
 
+    private GameObject torch;
     [Header("Movement")]
     public float walkSpeed;
     public float runSpeed;
@@ -30,6 +31,7 @@ public class Character_Controller : MonoBehaviour {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
         audioManager = GameObject.Find("Audio Source");
         audioSource = audioManager.GetComponent<AudioScript>().audioSource;
+        torch = GameObject.FindGameObjectWithTag("Torch").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -42,6 +44,19 @@ public class Character_Controller : MonoBehaviour {
 
     void Movement(float h, float v)
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (torch.activeSelf == true)
+            {
+                torch.SetActive(false);
+                //add sound for torch off
+            }
+            else
+            {
+                torch.SetActive(true);
+                //add sound for torch on
+            }
+        }
         if(Input.GetButton("Run"))
         {
             speed = runSpeed;
