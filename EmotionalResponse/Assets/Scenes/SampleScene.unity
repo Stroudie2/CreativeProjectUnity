@@ -24390,8 +24390,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c5190cfb0926b74283f86bf61136953, type: 3}
   - {fileID: 8300000, guid: 2bc58f4a722855e48b07fbffe93fdb66, type: 3}
   - {fileID: 8300000, guid: 448f8251c267be64aa3ebbdad5109fb6, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: c54490cea788bf843bd32f0592aed77d, type: 3}
+  - {fileID: 8300000, guid: 965d0b62b91cee242b16da556a770398, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

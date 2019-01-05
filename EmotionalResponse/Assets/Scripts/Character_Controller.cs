@@ -49,11 +49,18 @@ public class Character_Controller : MonoBehaviour {
             if (torch.activeSelf == true)
             {
                 torch.SetActive(false);
+                audioSource.pitch = 1.0f;
+                audioSource.time = 0.0f;
+                audioSource.PlayOneShot(clips[4]);  //using PlayOneShot allows for multiple sounds to be played
+                
                 //add sound for torch off
             }
             else
             {
                 torch.SetActive(true);
+                audioSource.pitch = 1.0f;
+                audioSource.time = 0.0f;
+                audioSource.PlayOneShot(clips[3]);
                 //add sound for torch on
             }
         }
