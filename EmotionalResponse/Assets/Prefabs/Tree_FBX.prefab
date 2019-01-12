@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33303924736551518}
   - component: {fileID: 23953100320585754}
   - component: {fileID: 65330028043739628}
+  - component: {fileID: 114536104926403752}
   m_Layer: 0
   m_Name: Tree_FBX
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332050611646858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6, y: -19.23, z: -0}
+  m_LocalPosition: {x: -0.91, y: 6.35, z: 0}
   m_LocalScale: {x: 0.9999995, y: 0.99999946, z: 0.99999946}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,3 +98,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.7435863, y: 3.1205065, z: 10.455437}
   m_Center: {x: 0.042491812, y: -0.1185641, z: 5.2128806}
+--- !u!114 &114536104926403752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332050611646858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c69a3892fc93954b87e70a5330b3091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDistance: 0
+  distanceTrigger: 10
+  player: {fileID: 0}
+  treeSounds:
+  - {fileID: 8300000, guid: 84b68fc454df78249a5c2130cfd0d23b, type: 3}
+  - {fileID: 8300000, guid: ffc2618ddeaf25b469061dbcb3a746ec, type: 3}
+  - {fileID: 8300000, guid: ba4cb7abb8877d8428abc2c5d26d4c51, type: 3}
+  - {fileID: 8300000, guid: f0ffd17b9957621418db4894ef81c436, type: 3}
+  - {fileID: 8300000, guid: 4e48531f0db318e44bd7330e23fd081d, type: 3}
+  - {fileID: 8300000, guid: f4e7d22aaa26a4c48893b8d579a7d7ce, type: 3}
+  - {fileID: 8300000, guid: 0a1bffd63c6f4ba449939493afdc6e02, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
