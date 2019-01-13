@@ -20,13 +20,29 @@ public class Character_Controller : MonoBehaviour {
 
     private float joystick_deadzone = 0.3f;
     private bool running = false;
+    public List<GameObject> nearbyTrees;
 
     [Header("Audio")]
     private GameObject audioManager;
     public AudioClip[] clips;
 
-	// Use this for initialization
-	void Start () {
+    public void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Tree")
+        {
+            nearbyTrees.Add(col.gameObject);
+        }
+    }
+
+    public void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Tree")
+        {
+            nearbyTrees.Remove(col.gameObject);
+        }
+    }
+
+    void Start () {
         rb = GetComponent<Rigidbody>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
         audioManager = GameObject.Find("Audio Source");

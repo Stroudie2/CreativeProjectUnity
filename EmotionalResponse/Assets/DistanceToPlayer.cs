@@ -11,7 +11,7 @@ public class DistanceToPlayer : MonoBehaviour {
 
     [Header("Audio")]
     public AudioClip[] treeSounds;
-    private AudioClip clipToPlay;
+    public AudioClip clipToPlay;
     private GameObject audioManager;
     private AudioSource audioSource;
 
@@ -77,7 +77,7 @@ public class DistanceToPlayer : MonoBehaviour {
             }
         }
         audioManager.GetComponent<AudioScript>().setAudio(clipToPlay);
-        audioSource.time = 0.0f;
+        //audioSource.time = 0.0f;
         audioSource.Play();
         //audioSource.PlayOneShot(clipToPlay);
     }
