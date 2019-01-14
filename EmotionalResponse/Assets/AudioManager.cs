@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour {
     private float lastPlayedTime = 0f;
     float playWaitTime = 0f;
 
-    GameObject lastPlayedTree;
-    AudioClip lastPlayedClip;
+    public GameObject lastPlayedTree;
+    public AudioClip lastPlayedClip;
 
     public void PlayTreeSound()
     {
@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour {
             else if (selectedTree != lastPlayedTree)
             {
                 lastPlayedTree = selectedTree;
-                while (selectedTree.GetComponent<AudioSource>().clip != lastPlayedClip)
+                while (selectedTree.GetComponent<AudioSource>().clip == lastPlayedClip)     //regenerate whilst it's the same
                 {
                     selectedTree.GetComponent<AudioSource>().clip = audioClips[Random.Range(0, audioClips.Count)];
                 }
