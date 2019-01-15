@@ -8,7 +8,7 @@ public class TreeManager : MonoBehaviour {
 	void Start () {
 		foreach(Transform tree in transform)
         {
-            tree.GetChild(0).eulerAngles = new Vector3((Random.value * 359f), 90f, 90f);
+            tree.eulerAngles = new Vector3(0f, Random.value * 359f, 0f);
         }
 	}
 	
