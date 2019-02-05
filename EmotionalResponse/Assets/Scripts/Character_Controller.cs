@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Character_Controller : MonoBehaviour {
 
+    private GameObject torch;
     [Header("Movement")]
-    public int walkSpeed;
-    public int runSpeed;
-    private int speed;
+    public float walkSpeed;
+    public float runSpeed;
+    private float speed;
     private float tempo;    //used for footstep sound
 
     private Rigidbody rb;
@@ -19,17 +20,34 @@ public class Character_Controller : MonoBehaviour {
 
     private float joystick_deadzone = 0.3f;
     private bool running = false;
+    public List<GameObject> nearbyTrees;
 
     [Header("Audio")]
     private GameObject audioManager;
     public AudioClip[] clips;
 
-	// Use this for initialization
-	void Start () {
+    public void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Tree")
+        {
+            nearbyTrees.Add(col.gameObject);
+        }
+    }
+
+    public void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Tree")
+        {
+            nearbyTrees.Remove(col.gameObject);
+        }
+    }
+
+    void Start () {
         rb = GetComponent<Rigidbody>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
         audioManager = GameObject.Find("Audio Source");
         audioSource = audioManager.GetComponent<AudioScript>().audioSource;
+        torch = GameObject.FindGameObjectWithTag("Torch").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -42,6 +60,26 @@ public class Character_Controller : MonoBehaviour {
 
     void Movement(float h, float v)
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (torch.activeSelf == true)
+            {
+                torch.SetActive(false);
+                audioSource.pitch = 1.0f;
+                audioSource.time = 0.0f;
+                audioSource.PlayOneShot(clips[4]);  //using PlayOneShot allows for multiple sounds to be played
+                
+                //add sound for torch off
+            }
+            else
+            {
+                torch.SetActive(true);
+                audioSource.pitch = 1.0f;
+                audioSource.time = 0.0f;
+                audioSource.PlayOneShot(clips[3]);
+                //add sound for torch on
+            }
+        }
         if(Input.GetButton("Run"))
         {
             speed = runSpeed;
@@ -78,7 +116,8 @@ public class Character_Controller : MonoBehaviour {
         {
             audioSource.pitch = speed;
             audioSource.volume = volume;
-            audioManager.GetComponent<AudioScript>().setAudio(clips[Random.Range(0, 4)]);
+            audioManager.GetComponent<AudioScript>().setAudio(clips[Random.Range(0, 3)]);
+            Debug.Log(audioSource.clip);
             audioSource.time = 0.0f;
             audioSource.Play();
         }
