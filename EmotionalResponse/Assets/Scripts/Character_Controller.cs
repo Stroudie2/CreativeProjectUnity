@@ -48,7 +48,9 @@ public class Character_Controller : MonoBehaviour {
         audioManager = GameObject.Find("Audio Source");
         audioSource = audioManager.GetComponent<AudioScript>().audioSource;
         torch = GameObject.FindGameObjectWithTag("Torch").gameObject;
-	}
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
+    }
 	
 	// Update is called once per frame
 	void Update () {
