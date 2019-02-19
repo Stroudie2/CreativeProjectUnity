@@ -8,9 +8,9 @@ public class TreeManager : MonoBehaviour {
 	void Start () {
 		foreach(Transform tree in transform)
         {
-            tree.eulerAngles = new Vector3(0f, Random.value * 359f, 0f);
+            //tree.eulerAngles = new Vector3(0f, Random.value * 359f, 0f);
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
