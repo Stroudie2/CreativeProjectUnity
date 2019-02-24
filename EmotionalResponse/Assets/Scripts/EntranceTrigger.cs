@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class EntranceTrigger : MonoBehaviour {
 
-    public GameObject tree;
+    public Character_Controller player;
+    public GameObject door;
     private AudioSource audioSource;
     void Start()
     {
-        audioSource = tree.GetComponent<AudioSource>();
-        //tree = GameObject.FindGameObjectWithTag("EntranceDoor").gameObject;
-        if (tree.name == "EntranceDoor")
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character_Controller>();
+        audioSource = door.GetComponent<AudioSource>();
+        //door = GameObject.FindGameObjectWithTag("EntranceDoor").gameObject;
+        if (door.name == "EntranceDoor")
         {
-            tree.SetActive(false);
+            door.SetActive(false);
         }
         else
         {
-            tree.SetActive(true);
+            door.SetActive(true);
         }
     }
 
@@ -24,20 +26,36 @@ void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            //add audio cues here for tree growing
-            if (tree.activeSelf == false)
+
+            if (door.name == "KeyDoor")
             {
-                audioSource.time = 0.0f;
-                audioSource.Play();
-                tree.SetActive(true);
+                Debug.Log("Key reuired door");
+                if (player.HasKey)
+                {
+                    Debug.Log("Door removed");
+                    door.SetActive(false);
+                    //play door sound for disappearing
+                    Destroy(this);
+                    //destroy trigger
+
+                }
             }
-            else
-            {
-                tree.SetActive(false);
-                //activate particle mist to location
-            }
-            Destroy(this);
-            //destroy trigger
+
+            //else
+            //{
+            //    //add audio cues here for door appearing
+            //    if (door.activeSelf == false)
+            //    {
+            //        audioSource.time = 0.0f;
+            //        audioSource.Play();
+            //        door.SetActive(true);
+            //    }
+            //    else
+            //    {
+            //        door.SetActive(false);
+            //        //play door sliding sound
+            //    }
+            //}
         }
     }
 }

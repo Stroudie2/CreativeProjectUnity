@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character_Controller : MonoBehaviour {
 
     private GameObject torch;
+    public bool HasKey = false;
     [Header("Movement")]
     public float walkSpeed;
     public float runSpeed;
