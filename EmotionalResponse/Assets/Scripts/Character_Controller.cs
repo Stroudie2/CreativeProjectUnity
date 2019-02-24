@@ -69,7 +69,7 @@ public class Character_Controller : MonoBehaviour {
                 torch.SetActive(false);
                 audioSource.pitch = 1.0f;
                 audioSource.time = 0.0f;
-                audioSource.PlayOneShot(clips[4]);  //using PlayOneShot allows for multiple sounds to be played
+                audioSource.PlayOneShot(clips[8]);  //using PlayOneShot allows for multiple sounds to be played
                 
                 //add sound for torch off
             }
@@ -78,7 +78,7 @@ public class Character_Controller : MonoBehaviour {
                 torch.SetActive(true);
                 audioSource.pitch = 1.0f;
                 audioSource.time = 0.0f;
-                audioSource.PlayOneShot(clips[3]);
+                audioSource.PlayOneShot(clips[7]);
                 //add sound for torch on
             }
         }
@@ -86,13 +86,13 @@ public class Character_Controller : MonoBehaviour {
         {
             speed = runSpeed;
             running = true;
-            tempo = 1.5f;
+            tempo = 1.2f;
         }
         else
         {
             speed = walkSpeed;
             running = false;
-            tempo = 1.2f;
+            tempo = 1.0f;
         }
 
         if (v > joystick_deadzone || v < -joystick_deadzone || h > joystick_deadzone || h < -joystick_deadzone)
@@ -108,7 +108,7 @@ public class Character_Controller : MonoBehaviour {
             rb.velocity = move;
 
             //transform.position += move * Time.deltaTime;
-            footSteps(tempo, 0.1f);
+            footSteps(tempo, 0.8f);
         }
     }
 
@@ -118,7 +118,7 @@ public class Character_Controller : MonoBehaviour {
         {
             audioSource.pitch = speed;
             audioSource.volume = volume;
-            audioManager.GetComponent<AudioScript>().setAudio(clips[Random.Range(0, 3)]);
+            audioManager.GetComponent<AudioScript>().setAudio(clips[Random.Range(0, 7)]);
             Debug.Log(audioSource.clip);
             audioSource.time = 0.0f;
             audioSource.Play();
