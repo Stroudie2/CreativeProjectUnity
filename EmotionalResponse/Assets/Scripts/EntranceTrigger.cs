@@ -35,7 +35,7 @@ void OnTriggerEnter(Collider other)
                     Debug.Log("Door removed");
                     door.SetActive(false);
                     //play door sound for disappearing
-                    Destroy(this);
+                    Destroy(this.gameObject);
                     //destroy trigger
 
                 }
