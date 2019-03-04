@@ -6,7 +6,7 @@ public class KeyPickup : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "PlayerHead")
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Character_Controller>().HasKey = true;
             Destroy(this.gameObject);

@@ -8,6 +8,8 @@ TagManager:
   - EntranceDoor2
   - Torch
   - Tree
+  - Pipe
+  - PlayerHead
   layers:
   - Default
   - TransparentFX

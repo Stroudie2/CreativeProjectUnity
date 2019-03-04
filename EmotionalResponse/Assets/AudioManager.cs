@@ -4,36 +4,36 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
 
-    public List<AudioClip> treeAudioClips;
+    public List<AudioClip> pipeAudioClips;
     public Character_Controller controller;
     private float lastPlayedTime = 0f;
     float playWaitTime = 0f;
 
-    public GameObject lastPlayedTree;
+    public GameObject lastPlayedPipe;
     public AudioClip lastPlayedClip;
 
-    public void PlayTreeSound()
+    public void PlayPipeSound()
     {
-        if (controller.nearbyTrees.Count > 0)   //checks trees around player
+        if (controller.nearbyPipes.Count > 0)   //checks trees around player
         {
-            GameObject selectedTree = controller.nearbyTrees[Random.Range(0, controller.nearbyTrees.Count)];    //pick random tree from around player
-            if ((selectedTree == lastPlayedTree) & (controller.nearbyTrees.Count > 1))  //don't play sound at same location twice
+            GameObject selectedPipe = controller.nearbyPipes[Random.Range(0, controller.nearbyPipes.Count)];    //pick random pipe from around player
+            if ((selectedPipe == lastPlayedPipe) & (controller.nearbyPipes.Count > 1))  //don't play sound at same location twice
             {
-                while (selectedTree == lastPlayedTree)
+                while (selectedPipe == lastPlayedPipe)
                 {
-                    selectedTree = controller.nearbyTrees[Random.Range(0, controller.nearbyTrees.Count)];   //forces to pick another tree
+                    selectedPipe = controller.nearbyPipes[Random.Range(0, controller.nearbyPipes.Count)];   //forces to pick another pipe
                 }
 
             }
-            else if (selectedTree != lastPlayedTree)
+            else if (selectedPipe != lastPlayedPipe)
             {
-                lastPlayedTree = selectedTree;
-                while (selectedTree.GetComponent<AudioSource>().clip == lastPlayedClip)     //regenerate whilst it's the same
+                lastPlayedPipe = selectedPipe;
+                while (selectedPipe.GetComponent<AudioSource>().clip == lastPlayedClip)     //regenerate whilst it's the same
                 {
-                    selectedTree.GetComponent<AudioSource>().clip = treeAudioClips[Random.Range(0, treeAudioClips.Count)];  //choose random tree sound
+                    selectedPipe.GetComponent<AudioSource>().clip = pipeAudioClips[Random.Range(0, pipeAudioClips.Count)];  //choose random pipe sound
                 }
-                lastPlayedClip = selectedTree.GetComponent<AudioSource>().clip;
-                selectedTree.GetComponent<AudioSource>().Play();
+                lastPlayedClip = selectedPipe.GetComponent<AudioSource>().clip;
+                selectedPipe.GetComponent<AudioSource>().Play();
             }
         }
 
@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour {
     {
         if (Time.time >= lastPlayedTime + playWaitTime)
         {
-            PlayTreeSound();            
+            PlayPipeSound();            
         }
     }
 }

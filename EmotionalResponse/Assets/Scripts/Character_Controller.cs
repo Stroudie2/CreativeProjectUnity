@@ -21,7 +21,7 @@ public class Character_Controller : MonoBehaviour {
 
     private float joystick_deadzone = 0.3f;
     private bool running = false;
-    public List<GameObject> nearbyTrees;
+    public List<GameObject> nearbyPipes;
 
     [Header("Audio")]
     private GameObject audioManager;
@@ -29,9 +29,9 @@ public class Character_Controller : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Tree")
+        if (col.gameObject.tag == "Pipe")
         {
-            nearbyTrees.Add(col.gameObject);
+            nearbyPipes.Add(col.gameObject);
         }
     }
 
@@ -39,7 +39,7 @@ public class Character_Controller : MonoBehaviour {
     {
         if (col.gameObject.tag == "Tree")
         {
-            nearbyTrees.Remove(col.gameObject);
+            nearbyPipes.Remove(col.gameObject);
         }
     }
 
