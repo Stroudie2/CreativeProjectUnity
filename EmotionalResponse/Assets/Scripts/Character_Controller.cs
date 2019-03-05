@@ -37,7 +37,7 @@ public class Character_Controller : MonoBehaviour {
 
     public void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Tree")
+        if (col.gameObject.tag == "Pipe")
         {
             nearbyPipes.Remove(col.gameObject);
         }
