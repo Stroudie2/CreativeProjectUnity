@@ -59,7 +59,7 @@ public class Character_Controller : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
 
         Movement(h, v);
-	}
+    }
 
     void Movement(float h, float v)
     {
