@@ -21,7 +21,10 @@ public class Character_Controller : MonoBehaviour {
 
     private float joystick_deadzone = 0.3f;
     private bool running = false;
+
     public List<GameObject> nearbyPipes;
+    //[HideInInspector]
+    public bool boxFly = false;
 
     [Header("Audio")]
     private GameObject audioManager;

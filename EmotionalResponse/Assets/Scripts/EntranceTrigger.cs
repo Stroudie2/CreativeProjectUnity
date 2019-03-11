@@ -7,10 +7,15 @@ public class EntranceTrigger : MonoBehaviour {
     public Character_Controller player;
     public GameObject door;
     private AudioSource audioSource;
+    private Animator animator;
+    public AudioClip doorOpen;
+    public AudioClip doorClose;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character_Controller>();
         audioSource = door.GetComponent<AudioSource>();
+        animator = door.GetComponent<Animator>();
         //door = GameObject.FindGameObjectWithTag("EntranceDoor").gameObject;
         if (door.name == "EntranceDoor")
         {
@@ -24,20 +29,19 @@ public class EntranceTrigger : MonoBehaviour {
 
 void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "PlayerHead")
         {
-
             if (door.name == "KeyDoor")
             {
-                Debug.Log("Key reuired door");
+                Debug.Log("Key required door");
                 if (player.HasKey)
                 {
-                    Debug.Log("Door removed");
-                    door.SetActive(false);
-                    //play door sound for disappearing
-                    Destroy(this.gameObject);
-                    //destroy trigger
-
+                    animator.SetBool("close", false);
+                    animator.SetBool("open", true);
+                    audioSource.clip = doorOpen;
+                    audioSource.time = 0.0f;
+                    audioSource.Play();
+                    //play door sound for sliding
                 }
             }
 
@@ -56,6 +60,26 @@ void OnTriggerEnter(Collider other)
             //        //play door sliding sound
             //    }
             //}
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "PlayerHead")
+        {
+            if (door.name == "KeyDoor")
+            {
+                Debug.Log("Player exit");
+                if (player.HasKey)
+                {
+                    animator.SetBool("open", false);
+                    animator.SetBool("close", true);
+                    audioSource.clip = doorClose;
+                    audioSource.time = 0.0f;
+                    audioSource.Play();
+                    //play door sound for sliding
+                }
+            }
         }
     }
 }
