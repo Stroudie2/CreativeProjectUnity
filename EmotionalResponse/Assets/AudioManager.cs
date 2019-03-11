@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour {
                 }
                 lastPlayedClip = selectedPipe.GetComponent<AudioSource>().clip;
                 selectedPipe.GetComponent<AudioSource>().Play();
+                selectedPipe.GetComponentInChildren<ParticleSystem>().Emit(1);  //emit smoke once
             }
         }
 
