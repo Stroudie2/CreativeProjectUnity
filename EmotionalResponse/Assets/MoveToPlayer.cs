@@ -37,6 +37,7 @@ public class MoveToPlayer : MonoBehaviour
             if (Vector3.Distance(transform.position, targetTransform.position) <= 0.2f)
             {
                 transform.gameObject.SetActive(false);
+                Destroy(transform.gameObject);
                 player.boxFly = false;
             }
         }
