@@ -10,7 +10,14 @@ public class PlayerBoxHit : MonoBehaviour {
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character_Controller>();
-        flyingBoxpile = GameObject.Find("Flying Boxpile").GetComponent<FlyToLocation>();
+        if (gameObject.name == "BoxFlyToLocationTrigger")
+        {
+            flyingBoxpile = GameObject.Find("Flying Boxpile").GetComponent<FlyToLocation>();
+        }
+        else if (gameObject.name == "BoxFlyToLocationTrigger2")
+        {
+            flyingBoxpile = GameObject.Find("Flying Boxpile2").GetComponent<FlyToLocation>();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,10 +26,15 @@ public class PlayerBoxHit : MonoBehaviour {
         {
             player.boxFly = true;
             transform.gameObject.SetActive(false);
+            Destroy(gameObject);
 
             if (gameObject.name == "BoxFlyToLocationTrigger")
             {
                 flyingBoxpile.boxFly = true;
+            }
+            else if (gameObject.name == "BoxFlyToLocationTrigger2")
+            {
+                flyingBoxpile.boxFly2 = true;
             }
         }
     }

@@ -12,6 +12,8 @@ TagManager:
   - PlayerHead
   - FlyingBox
   - BoxTarget
+  - BoxTarget2
+  - FlyingBox2
   layers:
   - Default
   - TransparentFX

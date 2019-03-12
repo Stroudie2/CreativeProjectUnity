@@ -44,6 +44,14 @@ void OnTriggerEnter(Collider other)
                     //play door sound for sliding
                 }
             }
+            else
+            {
+                animator.SetBool("close", false);
+                animator.SetBool("open", true);
+                audioSource.clip = doorOpen;
+                audioSource.time = 0.0f;
+                audioSource.Play();
+            }
 
             //else
             //{
@@ -79,6 +87,14 @@ void OnTriggerEnter(Collider other)
                     audioSource.Play();
                     //play door sound for sliding
                 }
+            }
+            else
+            {
+                animator.SetBool("open", false);
+                animator.SetBool("close", true);
+                audioSource.clip = doorClose;
+                audioSource.time = 0.0f;
+                audioSource.Play();
             }
         }
     }
