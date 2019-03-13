@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour {
     public GameObject lastPlayedPipe;
     public AudioClip lastPlayedClip;
 
+
     public void PlayPipeSound()
     {
         if (controller.nearbyPipes.Count > 0)   //checks trees around player
@@ -45,7 +46,7 @@ public class AudioManager : MonoBehaviour {
 
     void Update()
     {
-        if (Time.time >= lastPlayedTime + playWaitTime)
+        if ((Time.time > 5f) & (Time.time >= lastPlayedTime + playWaitTime))
         {
             PlayPipeSound();            
         }

@@ -36,7 +36,7 @@ public class FlyToLocation : MonoBehaviour {
             {
                 moveSpeed = Random.Range(5.0f, 25f);
                 t.transform.LookAt(targetTransform);
-                //t.transform.position += transform.forward * moveSpeed * Time.deltaTime;     //fly to position
+                t.transform.position += transform.forward * moveSpeed * Time.deltaTime;     //fly to position
                 //audioSource.PlayOneShot(flySound);
                 //play audio
                 if (Vector3.Distance(t.transform.position, targetTransform.position) <= 0.2f)   //when destination reached, destroy objects
