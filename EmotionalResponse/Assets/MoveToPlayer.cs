@@ -8,37 +8,36 @@ public class MoveToPlayer : MonoBehaviour
     public AudioClip flySound;
     Character_Controller player;
     Transform targetTransform;
-    int moveSpeed = 20;
-    int maxDist = 10;
+    Rigidbody rb;
+    int moveSpeed = 50;
+    bool finishedMove = false;
+    bool finishedAudio = false;
 
 	// Use this for initialization
 	void Start () {
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform.Find("TargetArea");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character_Controller>();
         audioSource = GetComponent<AudioSource>();
+        rb = gameObject.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if ((Vector3.Distance(transform.position, targetTransform.position) >= 0f) & (player.boxFly))
+		if ((Vector3.Distance(transform.position, targetTransform.position) >= 0f) & (player.boxFly) & (!finishedMove))
         {
             transform.LookAt(targetTransform);
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
-            audioSource.PlayOneShot(flySound);
-            //audio effect for flying toward player
-            //if (Vector3.Distance(transform.position, targetTransform.position) <= 2.5f)
-            //{
-            //    //audioSource.clip = flySound;
-            //    //audioSource.time = 0.0f;
-            //    //audioSource.Play();
-            //    audioSource.PlayOneShot(flySound);
-            //}
+            rb.AddRelativeForce(Vector3.forward * moveSpeed, ForceMode.Force);
 
-            if (Vector3.Distance(transform.position, targetTransform.position) <= 0.2f)
+            if ((Vector3.Distance(transform.position, targetTransform.position) <= 4.0f) & (!finishedAudio))
             {
-                transform.gameObject.SetActive(false);
-                Destroy(transform.gameObject);
-                player.boxFly = false;
+                audioSource.PlayOneShot(flySound);
+                finishedAudio = true;
+            }
+
+            if (Vector3.Distance(transform.position, targetTransform.position) <= 2.0f)
+            {
+                rb.velocity = Vector3.zero;
+                finishedMove = true;
             }
         }
 	}

@@ -9,14 +9,25 @@ public class FlyToLocation : MonoBehaviour {
     float moveSpeed = 25;
     public bool boxFly = false;
     public bool boxFly2 = false;
+    bool finishedMove = false;
+    bool finishedAudio = false;
     public GameObject[] boxes;
+    Rigidbody rb;
 
     // Use this for initialization
     void Start()
     {
         if (gameObject.tag == "FlyingBox")
         {
-            targetTransform = GameObject.FindGameObjectWithTag("BoxTarget").transform;
+            int rand = Random.Range(0, 2);
+            if (rand == 1)
+            {
+                targetTransform = GameObject.FindGameObjectWithTag("BoxTarget").transform;
+            }
+            else
+            {
+                targetTransform = GameObject.FindGameObjectWithTag("BoxTarget").transform.GetChild(0);
+            }
             boxes = GameObject.FindGameObjectsWithTag("FlyingBox");
         }
         else
@@ -34,21 +45,26 @@ public class FlyToLocation : MonoBehaviour {
         {
             foreach(GameObject t in boxes)  //each box
             {
-                moveSpeed = Random.Range(5.0f, 25f);
-                t.transform.LookAt(targetTransform);
-                t.transform.position += transform.forward * moveSpeed * Time.deltaTime;     //fly to position
-                //audioSource.PlayOneShot(flySound);
-                //play audio
-                if (Vector3.Distance(t.transform.position, targetTransform.position) <= 0.2f)   //when destination reached, destroy objects
+                if (!finishedMove)
+                {
+                    rb = t.GetComponent<Rigidbody>();
+                    //moveSpeed = Random.Range(5.0f, 25f);
+                    t.transform.LookAt(targetTransform);
+                    rb.mass = t.transform.lossyScale.x;
+                    rb.AddRelativeForce(Vector3.forward * moveSpeed, ForceMode.Force);
+                }
+                if ((Vector3.Distance(transform.position, targetTransform.position) >= 0.5f) & (!finishedAudio))
+                {
+                    audioSource.PlayOneShot(flySound);
+                    finishedAudio = true;
+                }
+                if (Vector3.Distance(t.transform.position, targetTransform.position) <= 1.2f)   //when destination reached, destroy objects
                 {
                     for (int i = 0; i < boxes.Length; i++)
                     {
-                        boxes[i].SetActive(false);
-                        Destroy(boxes[i]);
-                        Destroy(targetTransform.gameObject);
+                        rb.velocity = Vector3.zero;
+                        finishedMove = true;
                     }
-                    //t.transform.gameObject.SetActive(false);
-                    //Destroy(t.transform.gameObject);
                     boxFly = false;
                 }
             }

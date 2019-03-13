@@ -228,7 +228,7 @@ Transform:
   - {fileID: 309465993}
   - {fileID: 1429677259}
   m_Father: {fileID: 1854530843}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &60072245
 GameObject:
@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 68330201}
   - component: {fileID: 68330200}
   - component: {fileID: 68330199}
+  - component: {fileID: 68330202}
   m_Layer: 0
   m_Name: Box (7)
   m_TagString: FlyingBox
@@ -479,11 +480,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 68330197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 1.392, z: 0.274}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -23.401001, y: 1.892, z: -12.3289995}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 6
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &68330199
 BoxCollider:
@@ -539,6 +540,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 68330197}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &68330202
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 68330197}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &78866844
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +909,7 @@ GameObject:
   - component: {fileID: 99634302}
   m_Layer: 0
   m_Name: Box (5)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,6 +1301,7 @@ GameObject:
   - component: {fileID: 182071877}
   - component: {fileID: 182071880}
   - component: {fileID: 182071881}
+  - component: {fileID: 182071882}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -1466,6 +1483,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &182071882
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182071875}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &197760355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1601,7 @@ GameObject:
   - component: {fileID: 206852450}
   - component: {fileID: 206852449}
   - component: {fileID: 206852448}
+  - component: {fileID: 206852451}
   m_Layer: 0
   m_Name: Box (6)
   m_TagString: FlyingBox
@@ -1583,11 +1616,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206852446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 1.392, z: 0.066}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -23.155, y: 1.892, z: -12.641}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 5
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &206852448
 BoxCollider:
@@ -1643,6 +1676,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206852446}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &206852451
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 206852446}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &216399560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1702,7 @@ GameObject:
   - component: {fileID: 216399564}
   - component: {fileID: 216399563}
   - component: {fileID: 216399562}
+  - component: {fileID: 216399565}
   m_Layer: 0
   m_Name: Box (2)
   m_TagString: FlyingBox
@@ -1668,11 +1717,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 216399560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024, y: 0.845, z: -0.363}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -23.404001, y: 1.345, z: -13.2845}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 1
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &216399562
 BoxCollider:
@@ -1728,6 +1777,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 216399560}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &216399565
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216399560}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &235128973
 GameObject:
   m_ObjectHideFlags: 0
@@ -16800,6 +16864,7 @@ GameObject:
   - component: {fileID: 319632602}
   - component: {fileID: 319632601}
   - component: {fileID: 319632600}
+  - component: {fileID: 319632603}
   m_Layer: 0
   m_Name: Box (1)
   m_TagString: FlyingBox
@@ -16814,11 +16879,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319632598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24466705, y: 0.843, z: 0.18533325}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -23.807001, y: 1.3429999, z: -12.462}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 0
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &319632600
 BoxCollider:
@@ -16874,6 +16939,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319632598}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &319632603
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 319632598}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &335098990
 GameObject:
   m_ObjectHideFlags: 0
@@ -16888,7 +16968,7 @@ GameObject:
   - component: {fileID: 335098995}
   m_Layer: 0
   m_Name: Box (4)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22005,7 +22085,7 @@ GameObject:
   - component: {fileID: 358065928}
   m_Layer: 0
   m_Name: Box (2)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27119,6 +27199,7 @@ GameObject:
   - component: {fileID: 380040842}
   - component: {fileID: 380040841}
   - component: {fileID: 380040840}
+  - component: {fileID: 380040843}
   m_Layer: 0
   m_Name: Box (4)
   m_TagString: FlyingBox
@@ -27133,11 +27214,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380040838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.133, y: 1.392, z: -0.095}
-  m_LocalScale: {x: 0.2, y: 0.4, z: 0.2}
+  m_LocalPosition: {x: -21.39, y: 1.892, z: -14.16}
+  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 3
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &380040840
 BoxCollider:
@@ -27193,6 +27274,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380040838}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &380040843
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380040838}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &385481806
 GameObject:
   m_ObjectHideFlags: 0
@@ -27377,7 +27473,7 @@ GameObject:
   - component: {fileID: 459806699}
   m_Layer: 0
   m_Name: Box (1)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32252,7 +32348,7 @@ GameObject:
   - component: {fileID: 519495026}
   m_Layer: 0
   m_Name: Box (4)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41916,7 +42012,7 @@ GameObject:
   - component: {fileID: 569880307}
   m_Layer: 0
   m_Name: Box (1)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42422,6 +42518,7 @@ GameObject:
   - component: {fileID: 580224361}
   - component: {fileID: 580224360}
   - component: {fileID: 580224359}
+  - component: {fileID: 580224362}
   m_Layer: 0
   m_Name: Box (3)
   m_TagString: FlyingBox
@@ -42436,11 +42533,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 580224357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.339, y: 0.845, z: 0.288}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -22.931501, y: 1.345, z: -12.308}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 2
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &580224359
 BoxCollider:
@@ -42496,6 +42593,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 580224357}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &580224362
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 580224357}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &609592027
 GameObject:
   m_ObjectHideFlags: 0
@@ -42594,6 +42706,7 @@ GameObject:
   - component: {fileID: 617874852}
   - component: {fileID: 617874851}
   - component: {fileID: 617874850}
+  - component: {fileID: 617874855}
   m_Layer: 0
   m_Name: Flying Boxpile (1)
   m_TagString: FlyingBox
@@ -42608,18 +42721,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617874848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.89, y: 0.5, z: -16.31}
+  m_LocalPosition: {x: -23.44, y: 0.5, z: -12.74}
   m_LocalScale: {x: 1.5, y: 1, z: 1.5}
-  m_Children:
-  - {fileID: 319632599}
-  - {fileID: 216399561}
-  - {fileID: 580224358}
-  - {fileID: 864062923}
-  - {fileID: 697752623}
-  - {fileID: 206852447}
-  - {fileID: 68330198}
-  m_Father: {fileID: 1854530843}
-  m_RootOrder: 6
+  m_Children: []
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &617874850
 AudioSource:
@@ -42785,6 +42891,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617874848}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &617874855
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 617874848}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &643069146
 GameObject:
   m_ObjectHideFlags: 0
@@ -42884,7 +43005,7 @@ GameObject:
   - component: {fileID: 644060655}
   m_Layer: 0
   m_Name: Box (2)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42982,6 +43103,7 @@ GameObject:
   - component: {fileID: 662198440}
   - component: {fileID: 662198439}
   - component: {fileID: 662198438}
+  - component: {fileID: 662198441}
   m_Layer: 0
   m_Name: Box (3)
   m_TagString: FlyingBox
@@ -42996,11 +43118,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 662198436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.339, y: 0.845, z: 0.288}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -19.75, y: 1.345, z: -10.38}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 2
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &662198438
 BoxCollider:
@@ -43056,6 +43178,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 662198436}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &662198441
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 662198436}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &663094301
 GameObject:
   m_ObjectHideFlags: 0
@@ -43335,6 +43472,7 @@ GameObject:
   - component: {fileID: 677208509}
   - component: {fileID: 677208508}
   - component: {fileID: 677208507}
+  - component: {fileID: 677208510}
   m_Layer: 0
   m_Name: Box (4)
   m_TagString: FlyingBox
@@ -43349,11 +43487,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677208505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.133, y: 1.392, z: -0.095}
-  m_LocalScale: {x: 0.2, y: 0.4, z: 0.2}
+  m_LocalPosition: {x: -20.457998, y: 1.892, z: -10.9545}
+  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 3
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &677208507
 BoxCollider:
@@ -43409,6 +43547,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677208505}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &677208510
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 677208505}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &684564918
 GameObject:
   m_ObjectHideFlags: 0
@@ -43505,6 +43658,7 @@ GameObject:
   - component: {fileID: 697752626}
   - component: {fileID: 697752625}
   - component: {fileID: 697752624}
+  - component: {fileID: 697752627}
   m_Layer: 0
   m_Name: Box (5)
   m_TagString: FlyingBox
@@ -43519,11 +43673,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 697752622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.121, y: 1.392, z: -0.166}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -23.258501, y: 1.892, z: -12.988999}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 4
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &697752624
 BoxCollider:
@@ -43579,6 +43733,145 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 697752622}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &697752627
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697752622}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &711505841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711505842}
+  - component: {fileID: 711505843}
+  m_Layer: 0
+  m_Name: BackgroundAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711505842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711505841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &711505843
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 711505841}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d1cbe05ce2477d243aa689a2f72a297e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &711673894
 GameObject:
   m_ObjectHideFlags: 0
@@ -53049,6 +53342,216 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 795251407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &796012640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796012641}
+  - component: {fileID: 796012647}
+  - component: {fileID: 796012646}
+  - component: {fileID: 796012645}
+  - component: {fileID: 796012644}
+  - component: {fileID: 796012643}
+  - component: {fileID: 796012642}
+  m_Layer: 0
+  m_Name: Box (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &796012641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.83, y: 0.5, z: -9.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1854530843}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &796012642
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  serializedVersion: 2
+  m_Mass: 1.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!82 &796012643
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &796012644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0eb7e5600088b7499687c77dc8e31c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flySound: {fileID: 8300000, guid: 370873e89eaf84447bdb7015263b8686, type: 3}
+--- !u!65 &796012645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &796012646
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 4ad7b989669d7f3489cfd718d81164e2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &796012647
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796012640}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &798478696
 GameObject:
   m_ObjectHideFlags: 0
@@ -53117,6 +53620,7 @@ GameObject:
   - component: {fileID: 798519006}
   - component: {fileID: 798519005}
   - component: {fileID: 798519004}
+  - component: {fileID: 798519007}
   m_Layer: 0
   m_Name: Box (7)
   m_TagString: FlyingBox
@@ -53131,11 +53635,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 798519002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 1.392, z: 0.274}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -21.1515, y: 1.892, z: -13.606501}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 6
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &798519004
 BoxCollider:
@@ -53191,6 +53695,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 798519002}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &798519007
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798519002}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &816254244
 GameObject:
   m_ObjectHideFlags: 0
@@ -53202,6 +53721,7 @@ GameObject:
   - component: {fileID: 816254248}
   - component: {fileID: 816254247}
   - component: {fileID: 816254246}
+  - component: {fileID: 816254249}
   m_Layer: 0
   m_Name: Box (2)
   m_TagString: FlyingBox
@@ -53216,11 +53736,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 816254244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024, y: 0.845, z: -0.363}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -21.154501, y: 1.345, z: -14.562}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 1
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &816254246
 BoxCollider:
@@ -53276,6 +53796,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 816254244}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &816254249
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816254244}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &819565843
 GameObject:
   m_ObjectHideFlags: 0
@@ -53287,6 +53822,7 @@ GameObject:
   - component: {fileID: 819565847}
   - component: {fileID: 819565846}
   - component: {fileID: 819565845}
+  - component: {fileID: 819565848}
   m_Layer: 0
   m_Name: Box (2)
   m_TagString: FlyingBox
@@ -53301,11 +53837,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819565843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.024, y: 0.845, z: -0.363}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -20.2225, y: 1.345, z: -11.356501}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 1
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &819565845
 BoxCollider:
@@ -53361,6 +53897,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819565843}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &819565848
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819565843}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &851648040
 GameObject:
   m_ObjectHideFlags: 0
@@ -58145,6 +58696,7 @@ GameObject:
   - component: {fileID: 864062926}
   - component: {fileID: 864062925}
   - component: {fileID: 864062924}
+  - component: {fileID: 864062927}
   m_Layer: 0
   m_Name: Box (4)
   m_TagString: FlyingBox
@@ -58159,11 +58711,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864062922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.133, y: 1.392, z: -0.095}
-  m_LocalScale: {x: 0.2, y: 0.4, z: 0.2}
+  m_LocalPosition: {x: -23.6395, y: 1.892, z: -12.8825}
+  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
   m_Children: []
-  m_Father: {fileID: 617874849}
-  m_RootOrder: 3
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &864062924
 BoxCollider:
@@ -58219,6 +58771,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864062922}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &864062927
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864062922}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &870315530
 GameObject:
   m_ObjectHideFlags: 0
@@ -63151,7 +63718,7 @@ GameObject:
   - component: {fileID: 884176124}
   m_Layer: 0
   m_Name: Box (2)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68156,6 +68723,7 @@ GameObject:
   - component: {fileID: 924533347}
   - component: {fileID: 924533350}
   - component: {fileID: 924533351}
+  - component: {fileID: 924533352}
   m_Layer: 0
   m_Name: Flying Boxpile
   m_TagString: FlyingBox
@@ -68170,18 +68738,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924533345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.11, y: 0.5, z: -11.07}
+  m_LocalPosition: {x: -20.2585, y: 0.5, z: -10.812}
   m_LocalScale: {x: 1.5, y: 1, z: 1.5}
-  m_Children:
-  - {fileID: 1955116513}
-  - {fileID: 819565844}
-  - {fileID: 662198437}
-  - {fileID: 677208506}
-  - {fileID: 995097420}
-  - {fileID: 1225508776}
-  - {fileID: 1603933697}
-  m_Father: {fileID: 1854530843}
-  m_RootOrder: 5
+  m_Children: []
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &924533347
 BoxCollider:
@@ -68347,6 +68908,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &924533352
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 924533345}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &933949469
 GameObject:
   m_ObjectHideFlags: 0
@@ -73082,7 +73658,7 @@ GameObject:
   - component: {fileID: 986141951}
   m_Layer: 0
   m_Name: Box (1)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73180,6 +73756,7 @@ GameObject:
   - component: {fileID: 995097423}
   - component: {fileID: 995097422}
   - component: {fileID: 995097421}
+  - component: {fileID: 995097424}
   m_Layer: 0
   m_Name: Box (5)
   m_TagString: FlyingBox
@@ -73194,11 +73771,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 995097419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.121, y: 1.392, z: -0.166}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -20.077, y: 1.892, z: -11.061}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 4
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &995097421
 BoxCollider:
@@ -73254,6 +73831,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 995097419}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &995097424
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995097419}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1002679521
 GameObject:
   m_ObjectHideFlags: 0
@@ -73594,6 +74186,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031608038}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1045399391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045399392}
+  m_Layer: 0
+  m_Name: BoxTarget (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045399392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045399391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.43, y: 0, z: -1.7300005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1473390956}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052146680
 GameObject:
   m_ObjectHideFlags: 0
@@ -74104,7 +74724,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1109822076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.105, y: 0.905, z: 1.646}
+  m_LocalPosition: {x: 0.344, y: 1.506, z: 1.205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2009035242}
@@ -74301,7 +74921,7 @@ GameObject:
   - component: {fileID: 1140459840}
   m_Layer: 0
   m_Name: Box (3)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74510,7 +75130,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4178431644576088, guid: 3b5d79b5054fb6944be785730b347900, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1597138754547578, guid: 3b5d79b5054fb6944be785730b347900, type: 2}
       propertyPath: m_Name
@@ -75474,6 +76094,7 @@ GameObject:
   - component: {fileID: 1225508779}
   - component: {fileID: 1225508778}
   - component: {fileID: 1225508777}
+  - component: {fileID: 1225508780}
   m_Layer: 0
   m_Name: Box (6)
   m_TagString: FlyingBox
@@ -75488,11 +76109,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1225508775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 1.392, z: 0.066}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -19.9735, y: 1.892, z: -10.713}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 5
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1225508777
 BoxCollider:
@@ -75548,6 +76169,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1225508775}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1225508780
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1225508775}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1227956683
 GameObject:
   m_ObjectHideFlags: 0
@@ -80667,6 +81303,7 @@ GameObject:
   - component: {fileID: 1341171517}
   - component: {fileID: 1341171516}
   - component: {fileID: 1341171515}
+  - component: {fileID: 1341171518}
   m_Layer: 0
   m_Name: Box (6)
   m_TagString: FlyingBox
@@ -80681,11 +81318,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341171513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 1.392, z: 0.066}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -20.9055, y: 1.892, z: -13.918499}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 5
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1341171515
 BoxCollider:
@@ -80741,6 +81378,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341171513}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1341171518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341171513}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1352741350
 GameObject:
   m_ObjectHideFlags: 0
@@ -85928,7 +86580,7 @@ GameObject:
   - component: {fileID: 1391093687}
   m_Layer: 0
   m_Name: Box (3)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86128,7 +86780,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 8, z: 4}
   m_Children: []
   m_Father: {fileID: 1861396917}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1423759130
 BoxCollider:
@@ -86140,8 +86792,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.5961227, y: 1, z: 0.33668327}
-  m_Center: {x: 0.94467163, y: 0, z: 0.047056198}
+  m_Size: {x: 6.596123, y: 1, z: 0.6625333}
+  m_Center: {x: 0.94467163, y: 0, z: 0.058520943}
 --- !u!114 &1423759131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86171,7 +86823,7 @@ GameObject:
   - component: {fileID: 1424045592}
   m_Layer: 0
   m_Name: Box (7)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86272,7 +86924,7 @@ GameObject:
   - component: {fileID: 1424148766}
   m_Layer: 0
   m_Name: Box (3)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91426,7 +92078,7 @@ GameObject:
   - component: {fileID: 1434892009}
   m_Layer: 0
   m_Name: Box (6)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101241,9 +101893,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1473390955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.99, y: 0.92, z: -16.51}
+  m_LocalPosition: {x: -28.88, y: 0.92, z: -15.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1045399392}
   m_Father: {fileID: 1861396917}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101458,7 +102111,7 @@ Transform:
   m_LocalScale: {x: 0.50000024, y: 8, z: 4.000002}
   m_Children: []
   m_Father: {fileID: 1861396917}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1493500141
 BoxCollider:
@@ -101470,7 +102123,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.5961227, y: 1, z: 0.33668327}
+  m_Size: {x: 6.5961227, y: 1, z: 0.6625333}
   m_Center: {x: 0.94467163, y: 0, z: 0.047056198}
 --- !u!114 &1493500142
 MonoBehaviour:
@@ -101684,7 +102337,7 @@ GameObject:
   - component: {fileID: 1520812609}
   m_Layer: 0
   m_Name: Box (4)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101784,6 +102437,7 @@ GameObject:
   - component: {fileID: 1531455634}
   - component: {fileID: 1531455633}
   - component: {fileID: 1531455632}
+  - component: {fileID: 1531455637}
   m_Layer: 0
   m_Name: Flying Boxpile (2)
   m_TagString: FlyingBox
@@ -101798,18 +102452,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531455630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.84, y: 0.5, z: -14.96}
+  m_LocalPosition: {x: -21.1905, y: 0.5, z: -14.0175}
   m_LocalScale: {x: 1.5, y: 1, z: 1.5}
-  m_Children:
-  - {fileID: 2063328146}
-  - {fileID: 816254245}
-  - {fileID: 2049225783}
-  - {fileID: 380040839}
-  - {fileID: 1856280144}
-  - {fileID: 1341171514}
-  - {fileID: 798519003}
-  m_Father: {fileID: 1854530843}
-  m_RootOrder: 7
+  m_Children: []
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1531455632
 AudioSource:
@@ -101975,6 +102622,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531455630}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1531455637
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531455630}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1532072043
 GameObject:
   m_ObjectHideFlags: 0
@@ -102246,7 +102908,7 @@ GameObject:
   - component: {fileID: 1557464322}
   m_Layer: 0
   m_Name: Box (6)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102355,7 +103017,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1564068190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0.237}
+  m_LocalPosition: {x: 0.595, y: 1.144, z: 0.858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2009035242}
@@ -102457,6 +103119,7 @@ GameObject:
   - component: {fileID: 1603933700}
   - component: {fileID: 1603933699}
   - component: {fileID: 1603933698}
+  - component: {fileID: 1603933701}
   m_Layer: 0
   m_Name: Box (7)
   m_TagString: FlyingBox
@@ -102471,11 +103134,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603933696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 1.392, z: 0.274}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -20.2195, y: 1.892, z: -10.401}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 6
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1603933698
 BoxCollider:
@@ -102531,6 +103194,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603933696}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1603933701
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603933696}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1639057969
 GameObject:
   m_ObjectHideFlags: 0
@@ -102616,6 +103294,58 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1639057969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1644141783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1644141784}
+  m_Layer: 0
+  m_Name: StartFlyingBoxes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1644141784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644141783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 617874849}
+  - {fileID: 319632599}
+  - {fileID: 216399561}
+  - {fileID: 580224358}
+  - {fileID: 864062923}
+  - {fileID: 697752623}
+  - {fileID: 206852447}
+  - {fileID: 68330198}
+  - {fileID: 924533346}
+  - {fileID: 1955116513}
+  - {fileID: 819565844}
+  - {fileID: 662198437}
+  - {fileID: 677208506}
+  - {fileID: 995097420}
+  - {fileID: 1225508776}
+  - {fileID: 1603933697}
+  - {fileID: 1531455631}
+  - {fileID: 2063328146}
+  - {fileID: 816254245}
+  - {fileID: 2049225783}
+  - {fileID: 380040839}
+  - {fileID: 1856280144}
+  - {fileID: 1341171514}
+  - {fileID: 798519003}
+  m_Father: {fileID: 1854530843}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1652035293
 GameObject:
   m_ObjectHideFlags: 0
@@ -108067,7 +108797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4178431644576088, guid: 3b5d79b5054fb6944be785730b347900, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1597138754547578, guid: 3b5d79b5054fb6944be785730b347900, type: 2}
       propertyPath: m_Name
@@ -108341,7 +109071,7 @@ GameObject:
   - component: {fileID: 1812298544}
   m_Layer: 0
   m_Name: Box (7)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113262,7 +113992,7 @@ GameObject:
   - component: {fileID: 1847004572}
   m_Layer: 0
   m_Name: Box (6)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113379,10 +114109,9 @@ Transform:
   - {fileID: 1119749507}
   - {fileID: 464776613}
   - {fileID: 182071876}
-  - {fileID: 924533346}
-  - {fileID: 617874849}
-  - {fileID: 1531455631}
+  - {fileID: 796012641}
   - {fileID: 22170370}
+  - {fileID: 1644141784}
   m_Father: {fileID: 1861396917}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -113397,6 +114126,7 @@ GameObject:
   - component: {fileID: 1856280147}
   - component: {fileID: 1856280146}
   - component: {fileID: 1856280145}
+  - component: {fileID: 1856280148}
   m_Layer: 0
   m_Name: Box (5)
   m_TagString: FlyingBox
@@ -113411,11 +114141,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1856280143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.121, y: 1.392, z: -0.166}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.19999999}
+  m_LocalPosition: {x: -21.009, y: 1.892, z: -14.2665}
+  m_LocalScale: {x: 0.29999998, y: 0.39999998, z: 0.29999998}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 4
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1856280145
 BoxCollider:
@@ -113471,6 +114201,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1856280143}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1856280148
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1856280143}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1857938247
 GameObject:
   m_ObjectHideFlags: 0
@@ -118155,10 +118900,10 @@ Transform:
   - {fileID: 307031226}
   - {fileID: 1436070515}
   - {fileID: 1473390956}
-  - {fileID: 1788974772}
   - {fileID: 1423759129}
-  - {fileID: 1153450203}
+  - {fileID: 1788974772}
   - {fileID: 1493500140}
+  - {fileID: 1153450203}
   - {fileID: 576419331}
   - {fileID: 2072893537}
   m_Father: {fileID: 0}
@@ -118178,7 +118923,7 @@ GameObject:
   - component: {fileID: 1861759371}
   m_Layer: 0
   m_Name: Box (5)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127932,7 +128677,7 @@ GameObject:
   - component: {fileID: 1913366161}
   m_Layer: 0
   m_Name: Box (5)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128481,6 +129226,7 @@ GameObject:
   - component: {fileID: 1955116516}
   - component: {fileID: 1955116515}
   - component: {fileID: 1955116514}
+  - component: {fileID: 1955116517}
   m_Layer: 0
   m_Name: Box (1)
   m_TagString: FlyingBox
@@ -128495,11 +129241,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1955116512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24466705, y: 0.843, z: 0.18533325}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -20.6255, y: 1.3429999, z: -10.534}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 924533346}
-  m_RootOrder: 0
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1955116514
 BoxCollider:
@@ -128555,6 +129301,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1955116512}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1955116517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955116512}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1996996114
 GameObject:
   m_ObjectHideFlags: 0
@@ -133425,7 +134186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2009035238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.23, y: 1, z: -83}
+  m_LocalPosition: {x: -16.23, y: 1, z: -36.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 60072246}
@@ -133953,6 +134714,7 @@ GameObject:
   - component: {fileID: 2049225786}
   - component: {fileID: 2049225785}
   - component: {fileID: 2049225784}
+  - component: {fileID: 2049225787}
   m_Layer: 0
   m_Name: Box (3)
   m_TagString: FlyingBox
@@ -133967,11 +134729,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2049225782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.339, y: 0.845, z: 0.288}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -20.682001, y: 1.345, z: -13.585501}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 2
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2049225784
 BoxCollider:
@@ -134027,6 +134789,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2049225782}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2049225787
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2049225782}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2060341559
 GameObject:
   m_ObjectHideFlags: 0
@@ -134041,7 +134818,7 @@ GameObject:
   - component: {fileID: 2060341561}
   m_Layer: 0
   m_Name: Box (7)
-  m_TagString: FlyingBox
+  m_TagString: FlyingBox2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134139,6 +134916,7 @@ GameObject:
   - component: {fileID: 2063328149}
   - component: {fileID: 2063328148}
   - component: {fileID: 2063328147}
+  - component: {fileID: 2063328150}
   m_Layer: 0
   m_Name: Box (1)
   m_TagString: FlyingBox
@@ -134153,11 +134931,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063328145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24466705, y: 0.843, z: 0.18533325}
-  m_LocalScale: {x: 0.46666667, y: 0.7, z: 0.46666667}
+  m_LocalPosition: {x: -21.5575, y: 1.3429999, z: -13.7395}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
-  m_Father: {fileID: 1531455631}
-  m_RootOrder: 0
+  m_Father: {fileID: 1644141784}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2063328147
 BoxCollider:
@@ -134213,6 +134991,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063328145}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2063328150
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063328145}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2072893536
 GameObject:
   m_ObjectHideFlags: 0
