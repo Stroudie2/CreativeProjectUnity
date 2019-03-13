@@ -51,7 +51,7 @@ public class FlyToLocation : MonoBehaviour {
                     //moveSpeed = Random.Range(5.0f, 25f);
                     t.transform.LookAt(targetTransform);
                     rb.mass = t.transform.lossyScale.x;
-                    rb.AddRelativeForce(Vector3.forward * moveSpeed, ForceMode.Force);
+                    rb.AddRelativeForce(Vector3.forward.normalized * moveSpeed, ForceMode.Force);
                 }
                 if ((Vector3.Distance(transform.position, targetTransform.position) >= 0.5f) & (!finishedAudio))
                 {

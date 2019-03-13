@@ -28,7 +28,7 @@ public class MoveToPlayer : MonoBehaviour
             transform.LookAt(targetTransform);
             rb.AddRelativeForce(Vector3.forward * moveSpeed, ForceMode.Force);
 
-            if ((Vector3.Distance(transform.position, targetTransform.position) <= 4.0f) & (!finishedAudio))
+            if ((Vector3.Distance(transform.position, targetTransform.position) <= 6.0f) & (!finishedAudio))
             {
                 audioSource.PlayOneShot(flySound);
                 finishedAudio = true;
