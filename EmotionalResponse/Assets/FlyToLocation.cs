@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlyToLocation : MonoBehaviour {
     private AudioSource audioSource;
     public AudioClip flySound;
+    public AudioClip hitSound;
     Transform targetTransform;
     float moveSpeed = 25;
     public bool boxFly = false;
@@ -17,9 +18,9 @@ public class FlyToLocation : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        if (gameObject.tag == "FlyingBox")
+        if (gameObject.tag == "FlyingBox")  //first area of dlying boxes
         {
-            int rand = Random.Range(0, 2);
+            int rand = Random.Range(0, 2);  //randomly choose one side of the level to fly towards
             if (rand == 1)
             {
                 targetTransform = GameObject.FindGameObjectWithTag("BoxTarget").transform;
@@ -30,9 +31,9 @@ public class FlyToLocation : MonoBehaviour {
             }
             boxes = GameObject.FindGameObjectsWithTag("FlyingBox");
         }
-        else
+        else    //end of level boxes
         {
-            targetTransform = GameObject.FindGameObjectWithTag("BoxTarget2").transform;
+            targetTransform = GameObject.FindGameObjectWithTag("BoxTarget2").transform;     //the hole in the floor
             boxes = GameObject.FindGameObjectsWithTag("FlyingBox2");
         }
         audioSource = GetComponent<AudioSource>();
@@ -47,8 +48,8 @@ public class FlyToLocation : MonoBehaviour {
             {
                 if (!finishedMove)
                 {
-                    rb = t.GetComponent<Rigidbody>();
-                    //moveSpeed = Random.Range(5.0f, 25f);
+                    rb = t.GetComponent<Rigidbody>();   //set rigidbody for each box
+                    moveSpeed = Random.Range(5.0f, 25f);
                     t.transform.LookAt(targetTransform);
                     rb.mass = t.transform.lossyScale.x;
                     rb.AddRelativeForce(Vector3.forward.normalized * moveSpeed, ForceMode.Force);
@@ -57,8 +58,10 @@ public class FlyToLocation : MonoBehaviour {
                 {
                     audioSource.PlayOneShot(flySound);
                     finishedAudio = true;
+                    gameObject.AddComponent<BoxHitFloor>().FirstHitFloor = true;
+                    GetComponent<BoxHitFloor>().floorHitSound = hitSound;   //sets the sound to be played when hitting floor
                 }
-                if (Vector3.Distance(t.transform.position, targetTransform.position) <= 1.2f)   //when destination reached, destroy objects
+                if (Vector3.Distance(t.transform.position, targetTransform.position) <= 1.2f)   //when destination reached, stop added force
                 {
                     for (int i = 0; i < boxes.Length; i++)
                     {

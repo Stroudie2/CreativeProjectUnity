@@ -15,7 +15,7 @@ public class CrateCollapse : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "PlayerHead")
         {
             audiosource.time = 0.0f;
             audiosource.Play();

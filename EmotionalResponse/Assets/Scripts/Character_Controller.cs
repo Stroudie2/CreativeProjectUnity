@@ -15,7 +15,8 @@ public class Character_Controller : MonoBehaviour {
     private Rigidbody rb;
     private Vector3 move;
 
-    private AudioSource audioSource;
+    [HideInInspector]
+    public AudioSource audioSource;
     private Camera mainCam;
     private Vector3 desiredMoveDirection;
 
@@ -73,9 +74,7 @@ public class Character_Controller : MonoBehaviour {
                 torch.SetActive(false);
                 audioSource.pitch = 1.0f;
                 audioSource.time = 0.0f;
-                audioSource.PlayOneShot(clips[8]);  //using PlayOneShot allows for multiple sounds to be played
-                
-                //add sound for torch off
+                audioSource.PlayOneShot(clips[8]);  //using PlayOneShot allows for multiple sounds to be played                
             }
             else
             {
@@ -83,7 +82,6 @@ public class Character_Controller : MonoBehaviour {
                 audioSource.pitch = 1.0f;
                 audioSource.time = 0.0f;
                 audioSource.PlayOneShot(clips[7]);
-                //add sound for torch on
             }
         }
         if(Input.GetButton("Run"))

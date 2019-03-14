@@ -6,10 +6,11 @@ public class MoveToPlayer : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip flySound;
+    public AudioClip hitSound;
     Character_Controller player;
     Transform targetTransform;
     Rigidbody rb;
-    int moveSpeed = 50;
+    float moveSpeed = 50f;
     bool finishedMove = false;
     bool finishedAudio = false;
 
@@ -32,9 +33,11 @@ public class MoveToPlayer : MonoBehaviour
             {
                 audioSource.PlayOneShot(flySound);
                 finishedAudio = true;
+                gameObject.AddComponent<BoxHitFloor>().FirstHitFloor = true;
+                GetComponent<BoxHitFloor>().floorHitSound = hitSound;   //sets the sound to be played when hitting floor
             }
 
-            if (Vector3.Distance(transform.position, targetTransform.position) <= 2.0f)
+            if (Vector3.Distance(transform.position, targetTransform.position) <= 3.0f)
             {
                 rb.velocity = Vector3.zero;
                 finishedMove = true;

@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour {
 
     public void PlayPipeSound()
     {
-        if (controller.nearbyPipes.Count > 0)   //checks trees around player
+        if (controller.nearbyPipes.Count > 0)   //checks pipes around player
         {
             GameObject selectedPipe = controller.nearbyPipes[Random.Range(0, controller.nearbyPipes.Count)];    //pick random pipe from around player
             if ((selectedPipe == lastPlayedPipe) & (controller.nearbyPipes.Count > 1))  //don't play sound at same location twice
@@ -26,10 +26,10 @@ public class AudioManager : MonoBehaviour {
                 }
 
             }
-            else if (selectedPipe != lastPlayedPipe)
+            else if (selectedPipe != lastPlayedPipe)    //use this pipe
             {
-                lastPlayedPipe = selectedPipe;
-                while (selectedPipe.GetComponent<AudioSource>().clip == lastPlayedClip)     //regenerate whilst it's the same
+                lastPlayedPipe = selectedPipe;  //update this as the last played pipe too
+                while (selectedPipe.GetComponent<AudioSource>().clip == lastPlayedClip)     //regenerate whilst it's the same clip
                 {
                     selectedPipe.GetComponent<AudioSource>().clip = pipeAudioClips[Random.Range(0, pipeAudioClips.Count)];  //choose random pipe sound
                 }
@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour {
 
     void Update()
     {
-        if ((Time.time > 5f) & (Time.time >= lastPlayedTime + playWaitTime))
+        if ((Time.time > 15f) & (Time.time >= lastPlayedTime + playWaitTime))
         {
             PlayPipeSound();            
         }
