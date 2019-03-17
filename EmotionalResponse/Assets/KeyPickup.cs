@@ -18,6 +18,8 @@ public class KeyPickup : MonoBehaviour {
         if(other.gameObject.tag == "PlayerHead")
         {
             playerController.HasKey = true;
+            GameObject.Find("LightTrigger").GetComponent<BlinkLight>().lightFlicker = false;
+            GameObject.Find("LightTrigger").SetActive(false);
             playerController.audioSource.time = 0.0f;
             playerController.audioSource.PlayOneShot(playerController.clips[9]);
             pickupUI.displayTime = 2.0f;    //display time for ui

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class FlyOverPlayerHead : MonoBehaviour {
 
+    public List<GameObject> vents;
     public GameObject box;
     public AudioClip flySound;
+    public AudioClip rattleSound;
     GameObject player;
     Transform playerHeadTarget;
     bool launchBox = false;
@@ -53,9 +55,26 @@ public class FlyOverPlayerHead : MonoBehaviour {
                 boxHit.FirstHitFloor = true;    //only play sound of hitting ground when dropping from air
                 boxRb.velocity = Vector3.zero;
                 launchBox = false;
-                transform.gameObject.SetActive(false);
-                Destroy(gameObject);
+                StartCoroutine("WaitForShake");     //wait some time before triggering the vent shake
             }
         }
+    }
+
+    IEnumerator WaitForShake()
+    {
+        yield return new WaitForSeconds(3f);
+        StartCoroutine("ShakeVents");
+    }
+
+    IEnumerator ShakeVents()
+    {
+        for (int i = 0; i < vents.Count; i++)
+        {
+            vents[i].GetComponent<ObjectShake>().ShakeObject();
+            vents[i].GetComponentInParent<AudioSource>().PlayOneShot(rattleSound);   //play rattle sound as vents shake
+            yield return new WaitForSeconds(1f);
+        }
+        transform.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
