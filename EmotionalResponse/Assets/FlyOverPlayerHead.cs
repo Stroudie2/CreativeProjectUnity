@@ -55,7 +55,7 @@ public class FlyOverPlayerHead : MonoBehaviour {
                 boxHit.FirstHitFloor = true;    //only play sound of hitting ground when dropping from air
                 boxRb.velocity = Vector3.zero;
                 launchBox = false;
-                StartCoroutine("WaitForShake");     //wait some time before triggering the vent shake
+                StartCoroutine(WaitForShake());     //wait some time before triggering the vent shake
             }
         }
     }
@@ -63,7 +63,7 @@ public class FlyOverPlayerHead : MonoBehaviour {
     IEnumerator WaitForShake()
     {
         yield return new WaitForSeconds(3f);
-        StartCoroutine("ShakeVents");
+        StartCoroutine(ShakeVents());
     }
 
     IEnumerator ShakeVents()

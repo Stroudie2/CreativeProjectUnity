@@ -16,13 +16,11 @@ public class ObjectShake : MonoBehaviour {
 
     public void ShakeObject()
     {
-        StartCoroutine("ShakeNow");
-        Debug.Log(gameObject.name + " Shaking now");
+        StartCoroutine(ShakeNow());
     }
 
     IEnumerator ShakeNow()
     {
-
         if (!shaking)
         {
             shaking = true;
