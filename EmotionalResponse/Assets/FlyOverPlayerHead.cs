@@ -48,7 +48,7 @@ public class FlyOverPlayerHead : MonoBehaviour {
         {
             box.transform.LookAt(playerHeadTarget);
             boxRb.AddRelativeForce(Vector3.forward * moveSpeed, ForceMode.Impulse);
-            if (Vector3.Distance(box.transform.position, playerHeadTarget.position) <= 1.2)
+            if (Vector3.Distance(box.transform.position, playerHeadTarget.position) <= 1.5)
             {
                 box.GetComponent<AudioSource>().PlayOneShot(flySound);
                 finishedAudio = true;

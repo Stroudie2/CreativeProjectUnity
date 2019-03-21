@@ -55,6 +55,7 @@ public class Character_Controller : MonoBehaviour {
         torch = GameObject.FindGameObjectWithTag("Torch").gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
     }
 	
 	// Update is called once per frame
@@ -83,6 +84,10 @@ public class Character_Controller : MonoBehaviour {
                 audioSource.time = 0.0f;
                 audioSource.PlayOneShot(clips[7]);
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
         }
         if(Input.GetButton("Run"))
         {
