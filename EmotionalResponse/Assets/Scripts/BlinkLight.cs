@@ -19,13 +19,14 @@ public class BlinkLight : MonoBehaviour {
     }
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         light.gameObject.SetActive(false);
         lightFlicker = false;
 	}
-	
-	IEnumerator FlickeringLight()
+
+
+    IEnumerator FlickeringLight()
     {
         if (lightFlicker)
         {

@@ -62,7 +62,7 @@ public class FlyOverPlayerHead : MonoBehaviour {
 
     IEnumerator WaitForShake()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.0f);
         StartCoroutine(ShakeVents());
     }
 

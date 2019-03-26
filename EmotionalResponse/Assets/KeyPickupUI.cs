@@ -14,12 +14,12 @@ public class KeyPickupUI : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (displayTime > 0f)
-        {
-            displayTime -= Time.deltaTime;
-        }
-	}
+	//void Update () {
+	//	if (displayTime > 0f)
+ //       {
+ //           displayTime -= Time.deltaTime;
+ //       }
+	//}
 
     private void OnGUI()
     {

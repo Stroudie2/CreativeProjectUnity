@@ -35,7 +35,9 @@ public class Character_Controller : MonoBehaviour {
     {
         if (col.gameObject.tag == "Pipe")
         {
-            nearbyPipes.Add(col.gameObject);
+            if (!nearbyPipes.Contains(col.gameObject)){
+                nearbyPipes.Add(col.gameObject);
+            }
         }
     }
 
