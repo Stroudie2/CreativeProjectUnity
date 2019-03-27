@@ -37,6 +37,7 @@ public class AudioManager : MonoBehaviour {
                 selectedPipe.GetComponent<AudioSource>().Play();
                 selectedPipe.GetComponentInChildren<ParticleSystem>().Emit(1);  //emit smoke once
             }
+            //look into last played pipe being removed from the list (might be trying a certain object that isn't accessible)
         }
 
 
