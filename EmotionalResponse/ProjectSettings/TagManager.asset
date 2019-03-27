@@ -15,6 +15,7 @@ TagManager:
   - BoxTarget2
   - FlyingBox2
   - Floor
+  - Pipe1
   layers:
   - Default
   - TransparentFX

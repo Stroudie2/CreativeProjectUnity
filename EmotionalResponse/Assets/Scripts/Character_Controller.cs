@@ -33,7 +33,7 @@ public class Character_Controller : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Pipe")
+        if (col.gameObject.tag == "Pipe1")
         {
             if (!nearbyPipes.Contains(col.gameObject)){
                 nearbyPipes.Add(col.gameObject);
@@ -43,7 +43,7 @@ public class Character_Controller : MonoBehaviour {
 
     public void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Pipe")
+        if (col.gameObject.tag == "Pipe1")
         {
             nearbyPipes.Remove(col.gameObject);
         }

@@ -20,18 +20,22 @@ public class AudioManager : MonoBehaviour {
             GameObject selectedPipe = controller.nearbyPipes[Random.Range(0, controller.nearbyPipes.Count)];    //pick random pipe from around player
             if ((selectedPipe == lastPlayedPipe) & (controller.nearbyPipes.Count > 1))  //don't play sound at same location twice
             {
-                while (selectedPipe == lastPlayedPipe)
+                int count = 0;
+                while ((selectedPipe == lastPlayedPipe) & (count < 10))
                 {
                     selectedPipe = controller.nearbyPipes[Random.Range(0, controller.nearbyPipes.Count - 1)];   //forces to pick another pipe
+                    count++;
                 }
 
             }
             else if (selectedPipe != lastPlayedPipe)    //use this pipe
             {
                 lastPlayedPipe = selectedPipe;  //update this as the last played pipe too
-                while (selectedPipe.GetComponent<AudioSource>().clip == lastPlayedClip)     //regenerate whilst it's the same clip
+                int count = 0;
+                while ((selectedPipe.GetComponent<AudioSource>().clip == lastPlayedClip) & (count < 10))     //regenerate whilst it's the same clip
                 {
                     selectedPipe.GetComponent<AudioSource>().clip = pipeAudioClips[Random.Range(0, pipeAudioClips.Count - 1)];  //choose random pipe sound
+                    count++;
                 }
                 lastPlayedClip = selectedPipe.GetComponent<AudioSource>().clip;
                 selectedPipe.GetComponent<AudioSource>().Play();
