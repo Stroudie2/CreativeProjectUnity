@@ -17,7 +17,6 @@ public class FlyOverPlayerHead : MonoBehaviour {
     Rigidbody boxRb;
     float moveSpeed = 10f;
 
-	// Use this for initialization
 	void Start () {
         box.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
@@ -42,7 +41,6 @@ public class FlyOverPlayerHead : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
     void Update () {
 		if (launchBox)
         {
