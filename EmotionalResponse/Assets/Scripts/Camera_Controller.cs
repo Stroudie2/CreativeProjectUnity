@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Camera_Controller : MonoBehaviour
 {
-
+    public float minY = -50f;
+    public float maxY = 50f;
     public float rotateSpeed;
     float rotate;
     //public float smoothing;
@@ -24,7 +25,7 @@ public class Camera_Controller : MonoBehaviour
     {
         Vector2 MouseDelta = (Vector2)Input.mousePosition - PrevMousePos;
         RotY += MouseDelta.x;
-        if (RotX + (-MouseDelta.y) * rotateSpeed < 90f & RotX + (-MouseDelta.y) * rotateSpeed > -90f) // If in bounds
+        if (RotX + (-MouseDelta.y) * rotateSpeed < maxY & RotX + (-MouseDelta.y) * rotateSpeed > minY) // If in bounds
         {
             RotX += (-MouseDelta.y)*rotateSpeed;
         }

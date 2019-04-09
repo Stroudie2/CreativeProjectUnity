@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EntranceDoor
+  - EntranceDoor2
+  - Torch
+  - Tree
+  - Pipe
+  - PlayerHead
+  - FlyingBox
+  - BoxTarget
+  - BoxTarget2
+  - FlyingBox2
+  - Floor
+  - Pipe1
   layers:
   - Default
   - TransparentFX
